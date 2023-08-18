@@ -1,0 +1,36 @@
+{
+  "Invoice": [
+    {
+      "productName": "Bread 1",
+      "Quantity": 1,
+      "ExtendedPrice": 13.712,
+      "ShipperName": "Fun Inc.",
+      "ShippedDate": "2022-09-18T00:00:00",
+      "Status": "A"
+    },
+    {
+      "productName": "Bread 2",
+      "Quantity": 1,
+      "ExtendedPrice": 4.666,
+      "ShipperName": "Fun Inc.",
+      "ShippedDate": "2022-09-18T00:00:00",
+      "Status": "B"
+    },
+    {
+      "productName": "Bread 3",
+      "Quantity": 1,
+      "ExtendedPrice": 1.872,
+      "ShipperName": "Fun Inc.",
+      "ShippedDate": "2022-09-18T00:00:00",
+      "Status": "C"
+    },
+    {
+      "productName": "Bread 4",
+      "Quantity": 1,
+      "ExtendedPrice": 5.97,
+      "ShipperName": "Fun Inc.",
+      "ShippedDate": "2022-09-18T00:00:00",
+      "Status": "B"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<mvc:View 
+    controllerName="project1.controller.Hello"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Panel id="panel" headerText="{i18n>title}">
+        <content>
+            <Button id="btn1" text="Say Hello 2" press=".onShowName" class="sapUiSmallMarginEnd"></Button>
+            <Input id="input" value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%" />
+            <Button id="showDialog" text="show dialog" press=".showDialog"></Button>
+        </content>
+    </Panel>
+</mvc:View>

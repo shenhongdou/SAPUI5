@@ -14,6 +14,15 @@
       "id": "@sap/generator-fiori:basic",
       "version": "1.10.4",
       "toolsId": "96ff758d-ff2d-4289-b40b-1a4265c72628"
+    },
+    "dataSources": {
+      "invoiceRemote": {
+        "uri": "http://localhost:3002/https://services.odata.org/V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
     }
   },
   "sap.ui": {
@@ -59,8 +68,7 @@
         }
       },
       "invoice": {
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "invoice.json"
+        "dataSource": "invoiceRemote"
       }
     },
     "resources": {

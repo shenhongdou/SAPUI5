@@ -2,9 +2,22 @@
     controllerName="project1.controller.Invoice"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <List id="list" headerText="Invoice List" class="sapUiResponsiveMargin" width="auto" items="{invoice>/Invoice}">
+    <List id="list" headerText="Invoice List" class="sapUiResponsiveMargin" width="auto" items="{
+        path: 'invoice>/Invoices',
+        sorter: {
+            path: 'ShipperName',
+            group: true
+        }
+    }">
+        <headerToolbar>
+            <Toolbar id="toolbar">
+                <Title id="toolbarTitle" text="{i18n>title}" />
+                <ToolbarSpacer id="toolbarSpacer"  />
+                <SearchField id="toolbarSearch" width="50%" search=".onFilterInvoice"></SearchField>
+            </Toolbar>
+        </headerToolbar>
         <items>
-            <ObjectListItem id="listItem" title="{invoice>Quantity} x {invoice>productName}" number="{
+            <ObjectListItem id="listItem" title="{invoice>Quantity} x {invoice>ProductName}" number="{
                 parts: [{ path: 'invoice>ExtendedPrice' }, { path: 'view>/currency' }],
                 type: 'sap.ui.model.type.Currency',
                 formatOptions: {
@@ -13,7 +26,7 @@
                 }
             }"
             numberUnit="{view>/currency}"
-            numberState="{= ${invoice>ExtendedPrice} > 10 ? 'Error' : 'Success' }"
+            numberState="{= ${invoice>ExtendedPrice} > 1000 ? 'Error' : 'Success' }"
             >
                 <firstStatus>
                 <ObjectStatus id="status" text="{

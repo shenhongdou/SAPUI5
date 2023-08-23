@@ -49,12 +49,12 @@ sap.ui.define(
 
         const oLabel = new Label({
           text: "{i18n>productRatingLabelInitial}",
-        });
+        }).addStyleClass("sapUiSmallMargin");
 
         const oButton = new Button({
           text: "{i18n>productRatingButton}",
           press: this._onSubmit.bind(this),
-        });
+        }).addStyleClass("sapUiTinyMarginTopBottom");
 
         this.setAggregation("_rating", oRating);
         this.setAggregation("_label", oLabel);
@@ -66,13 +66,13 @@ sap.ui.define(
         this.setProperty("value", fValue, true);
 
         const oResourceBundle = this.getModel("i18n").getResourceBundle();
+
         this.getAggregation("_label").setText(
           oResourceBundle.getText("productRatingLabelIndicator", [
             fValue,
             oEvent.getSource().getMaxValue(),
           ])
         );
-
         this.getAggregation("_label").setDesign("Bold");
       },
 
@@ -98,6 +98,7 @@ sap.ui.define(
         oRM.renderControl(oControl.getAggregation("_rating"));
         oRM.renderControl(oControl.getAggregation("_label"));
         oRM.renderControl(oControl.getAggregation("_button"));
+
         oRM.close("div");
       },
     });

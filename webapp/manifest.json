@@ -93,6 +93,11 @@
           "name": "RouteView1",
           "pattern": ":?query:",
           "target": ["TargetView1"]
+        },
+        {
+          "name": "detail",
+          "pattern": "detail/{invoicePath}",
+          "target": "detail"
         }
       ],
       "targets": {
@@ -102,6 +107,13 @@
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
+        },
+        "detail": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "detail",
+          "viewName": "Detail"
         }
       }
     },

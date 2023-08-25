@@ -3,11 +3,13 @@ sap.ui.define(
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/routing/History",
     "sap/m/MessageToast",
+    "sap/ui/model/json/JSONModel",
+    // "project1/customType/mytype",
   ],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
    */
-  function (Controller, History, MessageToast) {
+  function (Controller, History, MessageToast, JSONModel) {
     "use strict";
 
     return Controller.extend("project1.controller.View1", {
@@ -17,6 +19,18 @@ sap.ui.define(
         oRouter
           .getRoute("detail")
           .attachPatternMatched(this._onObjectMatched, this);
+
+        this.getView().setModel(
+          new JSONModel({
+            name: "12345678901",
+            name2: "",
+            salesAmount: 12345.6789,
+            currencyCode: "EUR",
+          })
+        );
+
+        //   const oMyTypeInput = this.byId("myTypeInput");
+        //   sap.ui.getCore().getMessageManager().registerObject(oMyTypeInput, true);
       },
 
       _onObjectMatched(oEvent) {
@@ -49,6 +63,21 @@ sap.ui.define(
         MessageToast.show(
           oResourceBundle.getText("ratingConfirmation", [fValue])
         );
+      },
+
+      onNameChange(oEvent) {
+        // const oInput = oEvent.getSource();
+        // const oBinding = oInput.getBinding("value");
+        // const sValue = oInput.getValue();
+        // let sValueState = "None";
+        // let bValidationError = false;
+        // try {
+        //   oBinding.getType().validateValue(sValue);
+        // } catch (error) {
+        //   sValueState = "Error";
+        //   bValidationError = true;
+        // }
+        // oInput.setValueState(sValueState);
       },
     });
   }

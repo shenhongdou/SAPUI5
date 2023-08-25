@@ -3,10 +3,57 @@
     xmlns:mvc="sap.ui.core.mvc"
     controllerName="project1.controller.Detail"
     xmlns:wt="project1.control"
+    xmlns:l="sap.ui.layout"
 >
     <Page id="detail" title="Invoice Detail" showNavButton="true" navButtonPress=".onNavBack">
-        <ObjectHeader id="detailTitle" title="{invoice>ProductName}" intro="{invoice>ShipperName}" />
+        <ObjectHeader id="detailTitle" responsive="true" fullScreenOptimized="true" title="{invoice>ProductName}" intro="{invoice>ShipperName}" />
 
         <wt:ProductRating id="productRating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange"></wt:ProductRating>
+
+        <l:VerticalLayout id="layout" class="sapUiContentPadding">
+            <Label id="name" text="Name" labelFor="nameInput"></Label>
+            <Input
+                id="nameInput" 
+                class="sapUiSmallMarginBottom" 
+                placeholder="Enter name" 
+                valueStateText="Name mast not be empty. Maximum 10 characters." 
+                value="{
+                    path: '/name',
+                    type: 'sap.ui.model.type.String',
+                    constraints: {
+                        minLength: 1,
+                        maxLength: 10
+                    }
+                }"
+                change="onNameChange" />
+        </l:VerticalLayout>
+
+        <l:VerticalLayout id="layout2" class="sapUiContentPadding">
+            <Label id="salesAmount" text="Sales Amount" labelFor="salesAmountInput"></Label>
+            <Input
+                id="salesAmountInput" 
+                class="sapUiSmallMarginBottom" 
+                description="{/currencyCode}"
+                value="{
+                    parts: [
+                        { path: '/salesAmount' },
+                        { path: '/currencyCode' }
+                    ],
+                    type: 'sap.ui.model.type.Currency',
+                    formatOptions: { showMeasure: false }
+                }" />
+        </l:VerticalLayout>
+
+        <l:VerticalLayout id="layout3" class="sapUiContentPadding">
+            <Label id="myType" text="My Type" labelFor="myTypeInput"></Label>
+            <Input
+                id="myTypeInput" 
+                class="sapUiSmallMarginBottom" 
+                placeholder="Enter"
+                value="{
+                    path: '/name2',
+                    type: 'project1.customType.mytype'
+                }" />
+        </l:VerticalLayout>
     </Page>
 </mvc:View>

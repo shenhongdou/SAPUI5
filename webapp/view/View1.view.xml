@@ -2,6 +2,17 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+        <Panel 
+            id="panel" 
+            headerText="{i18n>title}" 
+            class="sapUiResponsiveMargin" 
+            width="auto" 
+            expandable="{device>/system/phone}"
+            expanded="{= !${device>/system/phone} }"
+            
+        >
+            <Button id="panelBtn" text="this is a button"></Button>
+        </Panel>
         <content>
            <mvc:XMLView id="hello" viewName="project1.view.Hello"></mvc:XMLView>  
            <mvc:XMLView id="list" viewName="project1.view.Invoice"></mvc:XMLView>

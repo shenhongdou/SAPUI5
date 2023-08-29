@@ -98,6 +98,11 @@
           "name": "detail",
           "pattern": "detail/{invoicePath}",
           "target": "detail"
+        },
+        {
+          "name": "category",
+          "pattern": "category",
+          "target": "category"
         }
       ],
       "targets": {
@@ -114,6 +119,13 @@
           "clearControlAggregation": false,
           "viewId": "detail",
           "viewName": "Detail"
+        },
+        "category": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "category",
+          "viewName": "Category"
         }
       }
     },

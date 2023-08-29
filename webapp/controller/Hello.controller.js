@@ -7,7 +7,7 @@ sap.ui.define(
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
    */
-  function (Controller, MessageToast, JSONModel) {
+  function (Controller, MessageToast, JSONModel, History) {
     "use strict";
 
     return Controller.extend("project1.controller.View1", {
@@ -40,6 +40,11 @@ sap.ui.define(
       closeDialog() {
         // this.byId("dialog").close();
         this.dialog.close();
+      },
+
+      gotoCategory() {
+        const oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("category", {}, true);
       },
     });
   }

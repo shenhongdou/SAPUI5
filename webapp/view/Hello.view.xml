@@ -7,6 +7,8 @@
             <Button id="btn1" text="Say Hello 2" press=".onShowName" class="sapUiSmallMarginEnd"></Button>
             <Input id="input" value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%" />
             <Button id="showDialog" text="show dialog" press=".showDialog"></Button>
+
+            <Button id="goCategory" class="sapUiSmallMarginBegin" text="go to category" press=".gotoCategory"></Button>
         </content>
     </Panel>
 </mvc:View>

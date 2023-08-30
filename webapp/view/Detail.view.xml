@@ -4,6 +4,8 @@
     controllerName="project1.controller.Detail"
     xmlns:wt="project1.control"
     xmlns:l="sap.ui.layout"
+    xmlns:vk="sap.ui.vk"
+    xmlns:vbm="sap.ui.vbm"
 >
     <Page id="detail" title="Invoice Detail" showNavButton="true" navButtonPress=".onNavBack">
         <ObjectHeader id="detailTitle" responsive="true" fullScreenOptimized="true" title="{invoice>ProductName}" intro="{invoice>ShipperName}" />
@@ -55,5 +57,15 @@
                     type: 'project1.customType.mytype'
                 }" />
         </l:VerticalLayout>
+
+        <vk:MapContainer id="mapContainer">
+            <vk:content>
+                <vk:ContainerContent id="containerContent" title="Analytic Map" icon="sap-icon://geograpic-bubble-chart">
+                    <vk:content>
+                        <vbm:AnalyticMap id="vb2"></vbm:AnalyticMap>
+                    </vk:content>
+                </vk:ContainerContent>
+            </vk:content>
+        </vk:MapContainer>
     </Page>
 </mvc:View>

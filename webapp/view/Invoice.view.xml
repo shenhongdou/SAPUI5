@@ -4,7 +4,7 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
 >
-    <!-- <List 
+    <List 
         id="list" 
         headerText="Invoice List" 
         class="sapUiResponsiveMargin" 
@@ -47,7 +47,7 @@
             </ObjectListItem>
             
         </items>
-    </List> -->
+    </List>
 
     <!-- <Table id="invoiceTable" class="sapUiResponsiveMargin" width="auto" items="{
         path: 'invoice>/Invoices',
@@ -114,7 +114,7 @@
     </Table> -->
 
     <List 
-        id="list" 
+        id="list2" 
         headerText="Invoice List" 
         class="sapUiResponsiveMargin" 
         width="auto" 

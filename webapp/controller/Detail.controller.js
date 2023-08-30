@@ -34,6 +34,12 @@ sap.ui.define(
       },
 
       _onObjectMatched(oEvent) {
+        console.log(
+          `/${window.decodeURIComponent(
+            oEvent.getParameter("arguments").invoicePath
+          )}`,
+          "path"
+        );
         this.getView().bindElement({
           path: `/${window.decodeURIComponent(
             oEvent.getParameter("arguments").invoicePath

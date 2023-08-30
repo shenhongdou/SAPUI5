@@ -1,14 +1,22 @@
 <mvc:View
     controllerName="project1.controller.Invoice"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <!-- <List id="list" headerText="Invoice List" class="sapUiResponsiveMargin" width="auto" items="{
-        path: 'invoice>/Invoices',
-        sorter: {
-            path: 'ShipperName',
-            group: true
-        }
-    }">
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <!-- <List 
+        id="list" 
+        headerText="Invoice List" 
+        class="sapUiResponsiveMargin" 
+        width="auto" 
+        items="{
+            path: 'invoice>/Invoices',
+            sorter: {
+                path: 'ShipperName',
+                group: true
+            }
+        }"
+    >
         <headerToolbar>
             <Toolbar id="toolbar">
                 <Title id="toolbarTitle" text="{i18n>title}" />
@@ -41,7 +49,7 @@
         </items>
     </List> -->
 
-    <Table id="invoiceTable" class="sapUiResponsiveMargin" width="auto" items="{
+    <!-- <Table id="invoiceTable" class="sapUiResponsiveMargin" width="auto" items="{
         path: 'invoice>/Invoices',
         sorter: {
             path: 'ShipperName',
@@ -103,5 +111,21 @@
 				</cells>
 			</ColumnListItem>
         </items>
-    </Table>
+    </Table> -->
+
+    <List 
+        id="list" 
+        headerText="Invoice List" 
+        class="sapUiResponsiveMargin" 
+        width="auto" 
+        items="{
+            path: 'invoice>/Invoices',
+            factory: '.productListFactory'
+        }"
+    >
+        <dependents>
+            <core:Fragment fragmentName="project1.view.ProductSimple" type="XML"></core:Fragment>
+            <core:Fragment fragmentName="project1.view.ProductExtended" type="XML"></core:Fragment>
+        </dependents>
+    </List>
 </mvc:View>

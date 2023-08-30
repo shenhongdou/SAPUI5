@@ -50,6 +50,31 @@ sap.ui.define(
           invoicePath,
         });
       },
+
+      productListFactory(sid, oContext) {
+        const Quantity = oContext.getProperty("Quantity");
+        const Discount = oContext.getProperty("Discount");
+
+        let oUIControl;
+
+        if (Quantity < 10 && Discount) {
+          oUIControl = this.byId("productSimple").clone(sid);
+        } else {
+          oUIControl = this.byId("productExtended").clone(sid);
+
+          if (Quantity < 1) {
+            oUIControl.addAttribute(
+              new ObjectAttribute({
+                text: {
+                  path: "i18n>outOfStock",
+                },
+              })
+            );
+          }
+        }
+
+        return oUIControl;
+      },
     });
   }
 );

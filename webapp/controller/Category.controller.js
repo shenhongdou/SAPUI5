@@ -1,9 +1,13 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel"],
+  [
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/core/routing/History",
+  ],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
    */
-  function (Controller, JSONModel) {
+  function (Controller, JSONModel, History) {
     "use strict";
 
     return Controller.extend("project1.controller.View1", {

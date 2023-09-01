@@ -1,0 +1,7 @@
+<mvc:View
+    controllerName="project1.controller.NotFound"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <IllustratedMessage id="message" title="Not Found" description="Can not find the page"></IllustratedMessage>
+</mvc:View>

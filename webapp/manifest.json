@@ -86,7 +86,10 @@
         "viewPath": "project1.view",
         "controlAggregation": "pages",
         "controlId": "app",
-        "clearControlAggregation": false
+        "clearControlAggregation": false,
+        "bypassed": {
+          "target": "notFound"
+        }
       },
       "routes": [
         {
@@ -126,6 +129,11 @@
           "clearControlAggregation": false,
           "viewId": "category",
           "viewName": "Category"
+        },
+        "notFound": {
+          "viewId": "notFound",
+          "viewName": "NotFound",
+          "transition": "show"
         }
       }
     },

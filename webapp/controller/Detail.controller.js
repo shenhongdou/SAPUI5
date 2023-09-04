@@ -29,17 +29,13 @@ sap.ui.define(
           })
         );
 
+        // 不需要注册也会进行校验，版本问题，高版本做了注册处理？
         //   const oMyTypeInput = this.byId("myTypeInput");
         //   sap.ui.getCore().getMessageManager().registerObject(oMyTypeInput, true);
       },
 
       _onObjectMatched(oEvent) {
-        console.log(
-          `/${window.decodeURIComponent(
-            oEvent.getParameter("arguments").invoicePath
-          )}`,
-          "path"
-        );
+        console.log(oEvent.getParameter("arguments").invoicePath, "path");
         this.getView().bindElement({
           path: `/${window.decodeURIComponent(
             oEvent.getParameter("arguments").invoicePath

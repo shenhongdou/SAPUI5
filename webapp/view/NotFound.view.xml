@@ -3,5 +3,9 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
 >
-    <IllustratedMessage id="message" title="Not Found" description="Can not find the page"></IllustratedMessage>
+    <IllustratedMessage id="message"  title="Not Found" description="Can not find the page">
+        <additionalContent>
+			<Button id="btn" text="Back" press=".back"/>
+		</additionalContent>
+    </IllustratedMessage>
 </mvc:View>

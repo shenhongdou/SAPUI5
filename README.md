@@ -48,3 +48,4 @@ A Fiori application.
 而 TargetView1 指定的 viewName 是 View1
 
 1. 测试 revert 的代码
+2. 测试 revert2

@@ -46,3 +46,5 @@ A Fiori application.
 
 入口文件是 View.view.xml 文件。原因是 manifest.json 文件里配置的 routes 里配置的根路径"pattern": ":?query:" 指向的视图是 TargetView1，
 而 TargetView1 指定的 viewName 是 View1
+
+1. 测试 revert 的代码

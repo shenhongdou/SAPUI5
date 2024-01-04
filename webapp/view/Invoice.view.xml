@@ -8,7 +8,7 @@
         id="list" 
         headerText="Invoice List" 
         class="sapUiResponsiveMargin" 
-        width="auto" 
+        width="auto"
         items="{
             path: 'invoice>/Invoices',
             sorter: {
@@ -25,7 +25,7 @@
             </Toolbar>
         </headerToolbar>
         <items>
-            <ObjectListItem id="listItem" title="{invoice>Quantity} x {invoice>ProductName}" number="{
+            <ObjectListItem id="listItem" title="{invoice>Quantity} x {invoice>ProductName}"  number="{
                 parts: [{ path: 'invoice>ExtendedPrice' }, { path: 'view>/currency' }],
                 type: 'sap.ui.model.type.Currency',
                 formatOptions: {
@@ -39,11 +39,15 @@
             press=".onPress"
             >
                 <firstStatus>
-                    <ObjectStatus id="status" text="{
-                        path: 'invoice>Status',
-                        formatter: '.formatter.statusText'
-                    }"></ObjectStatus>
+                    <ObjectStatus 
+                        id="status" 
+                        text="{
+                            path: 'invoice>Status',
+                            formatter: '.formatter.statusText'
+                        }">
+                    </ObjectStatus>
                 </firstStatus>
+                <ObjectAttribute id="attr" text="{CustomerName} {Address}" />
             </ObjectListItem>
             
         </items>

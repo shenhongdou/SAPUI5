@@ -9,6 +9,10 @@
             <Button id="showDialog" text="show dialog" press=".showDialog"></Button>
 
             <Button id="goCategory" class="sapUiSmallMarginBegin" text="go to category" press=".gotoCategory"></Button>
+
+            <Button id="goForm" class="sapUiSmallMarginBegin" text="go to form" press=".gotoForm"></Button>
+
+            <Button id="goIconTabBar" class="sapUiSmallMarginBegin" text="go to IconTabBar" press=".gotoIconTabBar"></Button>
         </content>
     </Panel>
 </mvc:View>

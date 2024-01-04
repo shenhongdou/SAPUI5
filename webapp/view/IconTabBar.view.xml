@@ -1,0 +1,60 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
+    controllerName="project1.controller.IconTabBar"
+    height="100%"
+
+>
+    <Page id="iconTabBarPage" title="Icon Tab Bar Page" showNavButton="true" navButtonPress=".onNavBack">
+            <IconTabBar id="icontabbar" expandable="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+                <items>
+                    <IconTabFilter id="info" icon="sap-icon://hint" key="info">
+                         <f:FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid" layout="TwoColumnsMidExpanded">
+                            <f:beginColumnPages>
+                                <ScrollContainer id="scroll1" height="300px" width="100%" vertical="true" focusable="true">
+                                    <TextArea id="test11" value="test11"></TextArea>
+                                    <TextArea id="test12" value="test12"></TextArea>
+                                    <TextArea id="test13" value="test11"></TextArea>
+                                    <TextArea id="test14" value="test12"></TextArea>
+                                    <TextArea id="test15" value="test11"></TextArea>
+                                    <TextArea id="test16" value="test12"></TextArea>
+                                    <TextArea id="test17" value="test11"></TextArea>
+                                    <TextArea id="test18" value="test12"></TextArea>
+                                    <TextArea id="test19" value="test11"></TextArea>
+                                    <TextArea id="test120" value="test12"></TextArea>
+                                    <TextArea id="test121" value="test11"></TextArea>
+                                    <TextArea id="test122" value="test12"></TextArea>
+                                </ScrollContainer>
+                            </f:beginColumnPages>
+                            <f:midColumnPages>
+                                <ScrollContainer id="scroll2" height="300px" width="100%" vertical="true" focusable="true">
+                                    <TextArea id="test21" value="test21"></TextArea>
+                                    <TextArea id="test22" value="test22"></TextArea>
+                                    <TextArea id="test23" value="test23"></TextArea>
+                                    <TextArea id="test24" value="test24"></TextArea>
+                                    <TextArea id="test25" value="test21"></TextArea>
+                                    <TextArea id="test26" value="test22"></TextArea>
+                                    <TextArea id="test27" value="test23"></TextArea>
+                                    <TextArea id="test28" value="test24"></TextArea>
+                                    <TextArea id="test29" value="test21"></TextArea>
+                                    <TextArea id="test210" value="test22"></TextArea>
+                                    <TextArea id="test211" value="test23"></TextArea>
+                                    <TextArea id="test212" value="test24"></TextArea>
+                                    <TextArea id="test213" value="test21"></TextArea>
+                                    <TextArea id="test214" value="test22"></TextArea>
+                                    <TextArea id="test215" value="test23"></TextArea>
+                                    <TextArea id="test216" value="test24"></TextArea>
+                                </ScrollContainer>
+                            </f:midColumnPages>
+                            
+                        </f:FlexibleColumnLayout>
+                    </IconTabFilter>
+                    <IconTabFilter id="attachments" icon="sap-icon://attachment" key="attachments" count="3"></IconTabFilter>
+                    <IconTabFilter id="notes" icon="sap-icon://notes" key="notes" count="12"></IconTabFilter>
+                    <IconTabFilter id="people" icon="sap-icon://group" key="people"></IconTabFilter>
+                    <IconTabFilter id="text" text="text"></IconTabFilter>
+                </items>
+            </IconTabBar>
+    </Page>
+</mvc:View>

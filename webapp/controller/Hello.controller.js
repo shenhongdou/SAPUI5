@@ -46,6 +46,16 @@ sap.ui.define(
         const oRouter = this.getOwnerComponent().getRouter();
         oRouter.navTo("category", {}, true);
       },
+
+      gotoForm() {
+        const oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("form", {}, true);
+      },
+
+      gotoIconTabBar() {
+        const oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("iconTabBar", {}, true);
+      },
     });
   }
 );

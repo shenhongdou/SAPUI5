@@ -106,6 +106,16 @@
           "name": "category",
           "pattern": "category",
           "target": "category"
+        },
+        {
+          "name": "form",
+          "pattern": "form",
+          "target": "form"
+        },
+        {
+          "name": "iconTabBar",
+          "pattern": "iconTabBar",
+          "target": "iconTabBar"
         }
       ],
       "targets": {
@@ -129,6 +139,20 @@
           "clearControlAggregation": false,
           "viewId": "category",
           "viewName": "Category"
+        },
+        "form": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "form",
+          "viewName": "Form"
+        },
+        "iconTabBar": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "iconTabBar",
+          "viewName": "iconTabBar"
         },
         "notFound": {
           "viewId": "notFound",

@@ -1,0 +1,53 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+	height="100%" 
+	controllerName="project1.controller.Form">
+	<Page id="smartFormPage" title="Smart Form" showNavButton="true" navButtonPress=".onNavBack">
+    <smartForm:SmartForm 
+		id="smartForm"
+		editTogglable="true" 
+		editToggled="handleEditToggled"
+		validationMode="Async"
+		title="Power Projector 4713">
+			<smartForm:Group id="product" title="Product">
+				<smartForm:GroupElement id="ignore" label="IGNORE">
+					<smartField:SmartField id="ignore-val" textLabel="{/Name}" value="{/Name}" />
+				</smartForm:GroupElement>
+
+				<smartForm:GroupElement id="category" tooltip="XML Tooltip" label="XML Label" >
+					<smartField:SmartField id="category-val" value="{/Category}">
+						<smartField:configuration>
+							<smartField:Configuration id="category-conf" controlType="dropDownList"
+								displayBehaviour="descriptionAndId" />
+						</smartField:configuration>
+					</smartField:SmartField>
+				</smartForm:GroupElement>
+			</smartForm:Group>
+
+			<smartForm:Group id="Supplier" title="Supplier">
+				<smartForm:GroupElement id="Supplier-g" label="Supplier">
+					<smartField:SmartField id="Supplier-val"  value="{/SupplierName}" />
+				</smartForm:GroupElement>
+			</smartForm:Group>
+
+			<smartForm:Group id="stock" title="Stock">
+				<smartForm:GroupElement id="stock-status" label="Status">
+					<smartField:SmartField id="stock-status-val" value="{/Status}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement id="stock-qua" label="Quantity">
+					<smartField:SmartField id="stock-qua-val"  value="{/Quantity}" />
+				</smartForm:GroupElement>
+			</smartForm:Group>
+
+			<smartForm:Group id="picture" title="Picture">	
+				<smartForm:GroupElement id="pic">
+					<Image id="img" src="{/ProductPicUrl}" />
+				</smartForm:GroupElement>
+			</smartForm:Group>
+	</smartForm:SmartForm>
+	</Page>
+</mvc:View>

@@ -24,7 +24,7 @@ sap.ui.define(
 
       onFilterInvoice(oEvent) {
         const aFilter = [];
-        const sQuery = oEvent.getParameter("query");
+        const sQuery = oEvent.getParameter("query"); // 或者oEvent.getSource().getValue()
 
         if (sQuery) {
           aFilter.push(
@@ -45,7 +45,7 @@ sap.ui.define(
         const invoicePath = window.encodeURIComponent(
           oItem.getBindingContext("invoice").getPath().substr(1)
         );
-
+        console.log(invoicePath, "invoicePath");
         oRouter.navTo("detail", {
           invoicePath,
         });
